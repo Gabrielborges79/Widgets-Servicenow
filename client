@@ -1,0 +1,16 @@
+api.controller=function($window,$scope, $location) {
+  /* widget controller */
+  var c = this;
+	
+	c.input_url_link_pesquisa = "";
+	
+	$scope.redirectURl = function(texto){
+		
+																			 
+$window.location.href = "?id=search&spa=1&t=kb&q=" + c.input_url_link_pesquisa;
+	
+	}
+	
+	
+};
+
