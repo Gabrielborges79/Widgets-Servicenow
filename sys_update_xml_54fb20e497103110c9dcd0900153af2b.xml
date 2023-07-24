@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2023-07-24 11:32:12">
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_ed7bf8cf97843110c9dcd0900153af90</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function($window,$scope, $location) {
+  /* widget controller */
+  var c = this;
+	
+	c.input_url_link_pesquisa = "";
+	
+	$scope.redirectURl = function(texto){
+		
+																			 
+$window.location.href = "?id=search&amp;spa=1&amp;t=kb&amp;q=" + c.input_url_link_pesquisa;
+	
+	}
+	
+	
+};
+
+]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+:root {
+	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+body, button, input {
+	font: 1em Hind, sans-serif;
+	line-height: 1.5em;
+}
+body, input {
+	color: black;
+}
+body, .search-bar {
+	display: flex;
+}
+body {
+	background: #f1f1f1;
+	height: 100vh;
+}
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+	transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+	width: 3em;
+	height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+	width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+	outline: transparent;
+}
+.search-bar {
+	margin: auto;
+	padding: 1.5em;
+	justify-content: center;
+	max-width: 30em;
+}
+.search-bar input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em black inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+	background: #fff;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	transform: scale(1);
+}
+.search-btn {
+	background: black;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-btn:before, 
+.search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.search-btn:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+	background: 			#696969	;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+	opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+	background: black;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+	transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body, input {
+		color: #f1f1f1;
+	}
+	body {
+		background: white;
+	}
+	.search-bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+	}
+	.search-bar input:focus,
+	.search-bar input:valid {
+		background: #3d3d3d;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+	}
+	.search-btn {
+		background: #f1f1f1;
+	}
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;catalog_clone&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;catalog_clone&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-19 20:18:06&lt;/sys_created_on&gt;&lt;sys_id&gt;ed7bf8cf97843110c9dcd0900153af90&lt;/sys_id&gt;&lt;sys_mod_count&gt;37&lt;/sys_mod_count&gt;&lt;sys_name&gt;catalog_clone&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_ed7bf8cf97843110c9dcd0900153af90&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-24 11:31:32&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;form class="search-bar"&gt;
+	&lt;input type="search" name="search" pattern=".*\S.*" ng-model="c.input_url_link_pesquisa" required&gt;
+	&lt;button class="search-btn" ng-click="redirectURl()" ng-type="submit"&gt;
+		&lt;span &gt;Search&lt;/span&gt;
+	&lt;/button&gt;
+&lt;/form&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-432970307</payload_hash>
+<remote_update_set display_value=""/>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-07-24 11:01:11</sys_created_on>
+<sys_id>54fb20e497103110c9dcd0900153af2b</sys_id>
+<sys_mod_count>25</sys_mod_count>
+<sys_recorded_at>18987ab38780000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-07-24 11:31:32</sys_updated_on>
+<table/>
+<target_name>catalog_clone</target_name>
+<type>Widget</type>
+<update_domain>global</update_domain>
+<update_guid>81e2bc6ce21031103307ce18be284240</update_guid>
+<update_guid_history>81e2bc6ce21031103307ce18be284240:-432970307,ced230ac6a1031104cfcba68203f6dda:189686907,e9d2f02ca2103110286d698be49a154c:-1747497228,c012b02c081031106f7def471e46d3eb:1814287669,b602706c01103110b2857fa25d99bc7a:-1620408579,ddf1fc2c9c103110a2a110b9aab046fd:-1601868887,3eb1342c2910311012561da36a605c1b:-199919623,5981fce8e81031103b3573a8966e6f4f:-516164539,9b41f4e8c21031102335462741221297:320628139,3b21b4e8bf1031105433654b01ced9f4:-355871669,148038a8ed103110ae300ea45ef34cf7:-1688839516,d5efe4a82a103110f6b99e01a78d30c8:-1129629397,3d7f64a8e1103110cf75c30ac90e07bd:-1248803105,215f64a8ab1031101d731f3dba755e0d:1850481048,3feeec68de1031106380250bb30e9d1d:918132296,cfaea8682f10311021c119363a4eb61a:-2051814864,3e9e606849103110a394fb3be64f32e4:400810064,b27e6068a7103110616c9ebe20597dde:987911076,800e6828eb103110cd7b181e66a9779d:522322460,bdcda0e4151031107787b5ea9052240c:-128442947,abad24e4d61031107e83aeddc7848a7e:327664964,358d24e44f103110e377540b1677386c:-1540368817,492ca4a4c91031104826e848287de68d:-344195612,440c60e4711031102b4bdd10902586b0:1023696734,d0fb20e42d1031108c07a9d35bfc112b:820791154,00cb68a44f10311050e15dc137d5b3d5:1023696734,8fab64a4f4103110cd87b17cd8458f48:820791154,fecae4645910311027287db3d07ad0b6:779437410,90ba28649b103110005015e93cb6a0b2:82610847,1c9a20640410311004d2b7ef4aca013d:780808759,a94aec24901031103d5abb225b20837e:1176965966,f8e9a8a03e1031100d436f18e0679174:-1617604122,ead964241f1031108019514fb3e6663a:-474831023,14b96424081031102fe109b2678ad618:-1068913195,2679ece0741031109ec0cb0918f0cb95:1874740698,c649a4e0081031108f3f4e01968f9d17:241674547,b99b308fad843110e5979d313dd79a3c:-1068913195,657bf8cfd884311000e25f994b6d7092:196111937</update_guid_history>
+<update_set display_value="Custom Search Button">e47ba4a497103110c9dcd0900153af73</update_set>
+<view/>
+</sys_update_xml>
+</unload>
